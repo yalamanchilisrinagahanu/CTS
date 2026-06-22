@@ -1,0 +1,163 @@
+/* Universal Selector */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* Body Styles */
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f4f4 url("background.jpg");
+background-size:cover;
+color:#333333;
+padding:20px;
+}
+
+/* Header Styles */
+
+#mainHeader{
+background:linear-gradient(to right,#007BFF,#00C6FF);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* Element Selector */
+
+h2{
+color:#0066cc;
+margin:15px 0;
+}
+
+/* Grouping Selector */
+
+h3,p{
+padding:5px;
+}
+
+/* Event Card */
+
+.eventCard{
+background:rgba(255,255,255,0.9);
+border:2px solid #cccccc;
+padding:20px;
+margin:15px 0;
+}
+
+/* Navigation */
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav li{
+padding:10px;
+margin:5px;
+}
+
+/* Link Styles */
+
+a:link{
+color:blue;
+}
+
+a:hover{
+color:red;
+}
+
+a:visited{
+color:purple;
+}
+
+a:active{
+color:green;
+}
+
+/* Table Styling */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid black;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#007BFF;
+color:white;
+}
+
+tr:nth-child(even){
+background:#f2f2f2;
+}
+
+/* Form Styling */
+
+input{
+padding:10px;
+margin:10px 0;
+outline:2px solid lightblue;
+}
+
+/* Multi Column Layout */
+
+.news{
+column-count:2;
+column-gap:30px;
+column-rule:1px solid gray;
+margin-top:20px;
+}
+
+/* Responsive Image */
+
+.responsive-image{
+width:50%;
+height:auto;
+margin-top:20px;
+}
+
+/* Hidden vs Display None */
+
+.hidden{
+visibility:hidden;
+}
+
+.none{
+display:none;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width:768px){
+
+nav ul{
+flex-direction:column;
+}
+
+body{
+font-size:14px;
+}
+
+.responsive-image{
+width:100%;
+}
+
+.eventCard{
+width:95%;
+}
+
+}
