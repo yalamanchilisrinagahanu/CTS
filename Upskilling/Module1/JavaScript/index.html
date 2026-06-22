@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Event Portal</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+body{
+font-family:Arial;
+padding:20px;
+}
+
+.event-card{
+border:1px solid gray;
+padding:10px;
+margin:10px;
+}
+
+.error{
+color:red;
+}
+
+#spinner{
+display:none;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Local Community Event Portal</h1>
+
+<input type="text" id="searchBox" placeholder="Search Events">
+
+<select id="categoryFilter">
+<option value="All">All</option>
+<option value="Music">Music</option>
+<option value="Workshop">Workshop</option>
+</select>
+
+<div id="eventsContainer"></div>
+
+<h2>Register</h2>
+
+<form id="registerForm">
+
+<input type="text" name="name" placeholder="Name">
+<span class="error" id="nameError"></span>
+
+<br><br>
+
+<input type="email" name="email" placeholder="Email">
+<span class="error" id="emailError"></span>
+
+<br><br>
+
+<select name="event">
+<option>Music Festival</option>
+<option>Workshop</option>
+</select>
+
+<br><br>
+
+<button type="submit" id="registerBtn">
+Register
+</button>
+
+</form>
+
+<p id="message"></p>
+
+<div id="spinner">
+Loading...
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
