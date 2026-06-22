@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selecting Elements</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h1 id="heading">Welcome to jQuery</h1>
+
+    <p id="para1">
+        This is the first paragraph.
+    </p>
+
+    <p id="para2">
+        This is the second paragraph.
+    </p>
+
+    <button id="hideBtn">
+        Hide Second Paragraph
+    </button>
+
+    <script>
+        $(document).ready(function () {
+
+            // Change the text of the h1
+            $("#heading").text("jQuery DOM Loaded Successfully");
+
+            // Hide second paragraph when button is clicked
+            $("#hideBtn").click(function () {
+                $("#para2").hide();
+            });
+
+        });
+    </script>
+
+</body>
+</html>
