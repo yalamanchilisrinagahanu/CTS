@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Responsibility Principle</title>
+</head>
+<body>
 
+<h2>Single Responsibility Principle</h2>
+
+<p id="result"></p>
+
+<script>
+
+class Report{
+
+    constructor(content){
+        this.content=content;
+    }
+
+}
+
+class ReportPrinter{
+
+    print(report){
+
+        document.getElementById("result").innerHTML=report.content;
+
+    }
+
+}
+
+let report=new Report("Monthly Report");
+
+let printer=new ReportPrinter();
+
+printer.print(report);
+
+</script>
+
+</body>
+</html>
