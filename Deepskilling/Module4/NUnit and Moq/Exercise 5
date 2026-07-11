@@ -1,1 +1,27 @@
+using NUnit.Framework;
 
+[TestFixture]
+public class CollectionTests
+{
+    [Test]
+    public void ArrayTest()
+    {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+
+        Assert.Contains(3, numbers);
+    }
+
+    [Test]
+    public void CollectionCountTest()
+    {
+        List<string> cities =
+            new List<string>()
+            {
+                "Hyderabad",
+                "Chennai",
+                "Mumbai"
+            };
+
+        Assert.AreEqual(3, cities.Count);
+    }
+}
