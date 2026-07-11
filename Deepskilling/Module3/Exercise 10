@@ -1,1 +1,10 @@
+CREATE VIEW EmployeeView
+AS
+SELECT
+    EmpId,
+    EmpName,
+    Department
+FROM Employee;
 
+SELECT *
+FROM EmployeeView;
