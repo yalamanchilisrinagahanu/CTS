@@ -1,1 +1,21 @@
+using NUnit.Framework;
 
+[TestFixture]
+public class StringTests
+{
+    [Test]
+    public void StringContainsTest()
+    {
+        string name = "Cognizant";
+
+        Assert.That(name, Does.Contain("Cog"));
+    }
+
+    [Test]
+    public void StringStartsWithTest()
+    {
+        string name = "NUnit";
+
+        Assert.That(name, Does.StartWith("N"));
+    }
+}
