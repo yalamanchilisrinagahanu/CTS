@@ -1,1 +1,18 @@
+CREATE TABLE EmployeeNew
+(
+    EmpId INT,
+    EmpName VARCHAR(50),
+    Salary INT
+);
 
+MERGE Employee AS Target
+USING EmployeeNew AS Source
+ON Target.EmpId = Source.EmpId
+
+WHEN MATCHED THEN
+    UPDATE
+    SET Target.Salary = Source.Salary
+
+WHEN NOT MATCHED THEN
+    INSERT(EmpId,EmpName,Salary)
+    VALUES(Source.EmpId,Source.EmpName,Source.Salary);
