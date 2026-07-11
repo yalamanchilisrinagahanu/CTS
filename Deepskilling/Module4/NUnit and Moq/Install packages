@@ -1,1 +1,3 @@
-
+Install-Package NUnit
+Install-Package NUnit3TestAdapter
+Install-Package Moq
