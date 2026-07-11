@@ -1,1 +1,10 @@
+CREATE PROCEDURE GetEmployeeByDepartment
+    @Department VARCHAR(50)
+AS
+BEGIN
+    SELECT *
+    FROM Employee
+    WHERE Department = @Department;
+END;
 
+EXEC GetEmployeeByDepartment 'IT';
