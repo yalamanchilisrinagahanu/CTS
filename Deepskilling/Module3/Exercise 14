@@ -1,1 +1,14 @@
+CREATE FUNCTION GetAnnualSalary
+(
+    @Salary INT
+)
+RETURNS INT
+AS
+BEGIN
+    RETURN @Salary * 12;
+END;
 
+SELECT
+    EmpName,
+    dbo.GetAnnualSalary(Salary)
+FROM Employee;
