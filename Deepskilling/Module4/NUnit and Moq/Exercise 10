@@ -1,1 +1,43 @@
+using NUnit.Framework;
+using Moq;
 
+public interface ILogger
+{
+    void Log(string message);
+}
+
+public class UserService
+{
+    private readonly ILogger logger;
+
+    public UserService(ILogger logger)
+    {
+        this.logger = logger;
+    }
+
+    public void Register()
+    {
+        logger.Log("User Registered");
+    }
+}
+
+[TestFixture]
+public class UserServiceTests
+{
+    [Test]
+    public void Register_CallsLog()
+    {
+        var mock =
+            new Mock<ILogger>();
+
+        UserService service =
+            new UserService(mock.Object);
+
+        service.Register();
+
+        mock.Verify(
+            x => x.Log("User Registered"),
+            Times.Once
+        );
+    }
+}
