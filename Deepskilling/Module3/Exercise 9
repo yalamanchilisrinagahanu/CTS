@@ -1,1 +1,14 @@
+SELECT Department, TotalSalary
+FROM
+(
+    SELECT
+        110000 AS IT,
+        100000 AS HR,
+        70000 AS Finance
+) AS SourceTable
 
+UNPIVOT
+(
+    TotalSalary
+    FOR Department IN (IT,HR,Finance)
+) AS UnpivotTable;
