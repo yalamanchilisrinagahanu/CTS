@@ -1,1 +1,5 @@
+CREATE INDEX IX_Employee_Department
+ON Employee(Department);
 
+CREATE INDEX IX_Employee_NameSalary
+ON Employee(EmpName,Salary);
