@@ -1,1 +1,9 @@
-
+SELECT
+    Department,
+    SUM(Salary) AS TotalSalary
+FROM Employee
+GROUP BY GROUPING SETS
+(
+    (Department),
+    ()
+);
