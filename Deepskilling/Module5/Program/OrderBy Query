@@ -1,1 +1,8 @@
+var result = db.Students
+               .OrderBy(s => s.Name)
+               .ToList();
 
+foreach (var s in result)
+{
+    Console.WriteLine(s.Name);
+}
