@@ -1,1 +1,3 @@
+var student = db.Students.Find(1);
 
+Console.WriteLine(student.Name);
