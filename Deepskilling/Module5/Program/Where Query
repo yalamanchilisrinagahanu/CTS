@@ -1,1 +1,8 @@
+var result = db.Students
+               .Where(s => s.Age > 20)
+               .ToList();
 
+foreach (var s in result)
+{
+    Console.WriteLine(s.Name);
+}
