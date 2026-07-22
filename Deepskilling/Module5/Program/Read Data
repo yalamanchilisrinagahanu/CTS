@@ -1,1 +1,10 @@
+using EntityFrameworkCore8.Data;
 
+AppDbContext db = new AppDbContext();
+
+var students = db.Students.ToList();
+
+foreach (var s in students)
+{
+    Console.WriteLine($"{s.StudentId} {s.Name} {s.Age}");
+}
