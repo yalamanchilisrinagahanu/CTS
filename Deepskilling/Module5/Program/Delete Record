@@ -1,1 +1,7 @@
+var student = db.Students.Find(1);
 
+db.Students.Remove(student);
+
+db.SaveChanges();
+
+Console.WriteLine("Deleted Successfully");
