@@ -1,1 +1,7 @@
+[HttpGet]
+public async Task<IActionResult> Get()
+{
+    await Task.Delay(3000);
 
+    return Ok("Completed");
+}
