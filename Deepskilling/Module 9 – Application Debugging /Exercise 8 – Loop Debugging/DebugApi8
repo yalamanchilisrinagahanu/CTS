@@ -1,1 +1,12 @@
+[HttpGet]
+public IActionResult Get()
+{
+    int total = 0;
 
+    for(int i=1;i<=5;i++)
+    {
+        total += i;
+    }
+
+    return Ok(total);
+}
