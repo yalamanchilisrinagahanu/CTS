@@ -1,1 +1,16 @@
+[HttpGet]
+public IActionResult Get()
+{
+    List<int> numbers = new()
+    {
+        10,
+        20,
+        30,
+        40,
+        50
+    };
 
+    var result = numbers.Where(x => x > 20).ToList();
+
+    return Ok(result);
+}
