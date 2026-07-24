@@ -1,1 +1,14 @@
+using Microsoft.AspNetCore.Mvc;
 
+namespace DebugApi2.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class EmployeeController : ControllerBase
+{
+    [HttpGet("{id}")]
+    public IActionResult Get(int id)
+    {
+        return Ok($"Employee Id : {id}");
+    }
+}
