@@ -1,1 +1,16 @@
+public class Employee
+{
+    public int Id { get; set; }
 
+    public string Name { get; set; } = "";
+}
+
+
+
+
+
+[HttpPost]
+public IActionResult Post(Employee employee)
+{
+    return Ok(employee);
+}
