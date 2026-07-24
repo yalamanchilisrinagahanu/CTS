@@ -1,1 +1,20 @@
+[HttpGet]
+public IActionResult Get()
+{
+    List<int> numbers = new()
+    {
+        10,
+        20,
+        30,
+        40
+    };
 
+    int sum = 0;
+
+    foreach(var n in numbers)
+    {
+        sum += n;
+    }
+
+    return Ok(sum);
+}
