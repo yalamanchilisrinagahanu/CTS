@@ -1,1 +1,21 @@
+using Microsoft.AspNetCore.Mvc;
 
+namespace DebugApi5.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class MathController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult Divide(int a,int b)
+    {
+        try
+        {
+            return Ok(a / b);
+        }
+        catch(Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+}
